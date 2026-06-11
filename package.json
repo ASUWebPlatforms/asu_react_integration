@@ -4,7 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25"
+  },
+  "scripts": {
+    "build": "esbuild build.js --bundle --format=iife --minify --define:process.env.NODE_ENV=\\\"production\\\" --outfile=dist/react.production.min.js && node patch.js"
   }
 }
