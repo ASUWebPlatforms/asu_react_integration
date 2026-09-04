@@ -11,6 +11,7 @@
     "esbuild": "^0.25"
   },
   "scripts": {
-    "build": "esbuild build.js --bundle --format=iife --minify --define:process.env.NODE_ENV=\\\"production\\\" --outfile=dist/react.production.min.js && node patch.js"
+    "build": "esbuild build.js --bundle --format=iife --minify --define:process.env.NODE_ENV=\\\"production\\\" --outfile=dist/react.production.min.js",
+    "postinstall": "yarn build"
   }
 }
